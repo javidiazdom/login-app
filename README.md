@@ -1,6 +1,6 @@
 # Login app
 
-## Considerations
+## Environment configuration
 
 For this application to work you'll need to set up a MongoDB connection on the `config/db.config.js`. For development i've used a locally hosted mongodb instance, with a preconfigured database named `loginapp`.
 

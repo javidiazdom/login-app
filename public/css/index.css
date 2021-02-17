@@ -17,6 +17,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.password-msg,.username-msg {
+  display: none;
+  margin: 0.6rem 1rem;
+  color: red;
+}
+
 .overlay,
 .form-panel.one:before {
   position: absolute;

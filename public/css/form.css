@@ -1,0 +1,89 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(
+        45deg,
+        rgba(66, 183, 245, 0.8) 0%,
+        rgba(66, 245, 189, 0.4) 100%
+        );
+  font-family: "Roboto", sans-serif;
+  font-size: 0.85rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.form {
+    background-color: white;
+    margin: 100px auto 10px;
+    width: 600px;
+    padding: 2rem 3rem;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    line-height: 2rem;
+    color: #4285f4;
+}
+
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+.form-button {
+    color: white;
+    text-transform: capitalize;
+    font-family: "Roboto", sans-serif;
+    border-radius: 4px;
+    margin-top: 1em;
+    width: 100%;
+    background-color: #4285f4;
+    outline: none;
+    border: none;
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+}
+
+h5 {
+    display: none;
+    color: red;
+    font-size: 0.7rem;
+    margin: none;
+}

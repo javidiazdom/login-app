@@ -5,57 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/index.css">
-    <title>Document</title>
+    <title>Login</title>
   </head>
   <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="./login.js"></script>
     <script defer src="./login.logic.js"></script>
+    <script defer src="./register.logic.js"></script>
     <div class="form">
       <div class="form-toggle"></div>
       <div class="form-panel one">
         <div class="form-header">
-          <h1>Account Login</h1>
+          <h1>Login</h1>
         </div>
         <div class="form-content">
           <form id = "login-form">
             <div class="form-group">
-              <label for="username">Username</label>
+              <label for="username">Nombre de usuario</label>
               <input
                 type="text"
-                id="username"
-                name="username"
+                id="login-username"
+                name="loginusername"
                 required="required"
               />
+              <h5 class = "username-msg">El usuario no existe</h5>
             </div>
             <div class="form-group">
-              <label for="password">Password</label>
+              <label for="password">Contraseña</label>
               <input
                 type="password"
-                id="password"
+                id="loginpassword"
                 name="password"
                 required="required"
               />
+              <h5 class = "password-msg">Contraseña incorrecta</h5>
             </div>
             <div class="form-group">
-              <label class="form-remember">
-                <input type="checkbox" />Remember Me </label
-              ><a class="form-recovery" href="#">Forgot Password?</a>
-            </div>
-            <div class="form-group">
-              <button type="submit" id = "login_button">Log In</button>
+              <button type="submit" id = "login_button">Entrar</button>
             </div>
           </form>
         </div>
       </div>
       <div class="form-panel two">
         <div class="form-header">
-          <h1>Register Account</h1>
+          <h1>Registrarse</h1>
         </div>
         <div class="form-content">
-          <form>
+          <form id = "register-form" action="otrapagina.com">
             <div class="form-group">
-              <label for="username">Username</label>
+              <label for="username">Nombre de usuario</label>
               <input
                 type="text"
                 id="username"
@@ -64,7 +62,7 @@
               />
             </div>
             <div class="form-group">
-              <label for="password">Password</label>
+              <label for="password">Contraseña</label>
               <input
                 type="password"
                 id="password"
@@ -73,7 +71,7 @@
               />
             </div>
             <div class="form-group">
-              <label for="cpassword">Confirm Password</label>
+              <label for="cpassword">Confirmar Contraseña</label>
               <input
                 type="password"
                 id="cpassword"
@@ -82,11 +80,7 @@
               />
             </div>
             <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" required="required" />
-            </div>
-            <div class="form-group">
-              <button type="submit">Register</button>
+              <button type="submit" form = "register-form" id = "register-button">Registrarse</button>
             </div>
           </form>
         </div>
